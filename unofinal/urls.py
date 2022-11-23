@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from users import views as user_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('blog.urls'))      #Este path va vacio, porque no quiero que me lleve a la pagina de 404, quiero que al correr el servidor me lleve a home
+    path('register/', user_views.register, name='register'),
+    path('', include('blog.urls')),      #Este path va vacio, porque no quiero que me lleve a la pagina de 404, quiero que al correr el servidor me lleve a home
 ]
