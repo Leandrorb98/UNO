@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from .models import Post
-from django.views.generic import ListView, DetailView, CreateView #10
+from django.views.generic import ListView, DetailView, CreateView, UpdateView #10
 
 posts=[
 	{
@@ -34,7 +34,7 @@ class PostListView(ListView):#10
 class PostDetailView(DetailView):#10
 	model = Post
 
-class PostCreateView(LoginRequired, MixinCreateView):#10
+class PostCreateView(LoginRequiredMixin, CreateView):#10
 	model = Post
 	fields = ['title','content']
 
@@ -47,8 +47,8 @@ class PostUpdateView(LoginRequiredMixin, UpdateView):#10
 	fields = ['title','content']
 	
 	def form_valid (self, form):
-	form.instance.author = self.request.user
-	return super().form_valid(form)
+		form.instance.autor = self.request.user
+		return super().form_valid(form)
 
 def about(request):
     return render(request, 'blog/about.html')
