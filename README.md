@@ -35,3 +35,7 @@ El Blog cuenta con varias características entre las cuales podemos mencionar:
 - La barra superior izquierda cuenta con un enlace "Home" desde el cual se accede a la página inicial. Adicionalmente se dispone de un enlace "About" a través del cual se puede tomar contacto con los desarrolladores.
 - La barra superior derecha cuenta con un enlace "Login" destinado al logueo de usuarios. También se cuenta con la opción "Register" utilizada para registrar a los usuarios. El usuario deberá darse de alta, completando los campos solicitados.
 - En el cuerpo del Blog, puede accederse a los distintos posteos.
+
+
+Enlace al video mostrando el funcionamiento del blog sin el ABM:
+https://drive.google.com/drive/folders/1Y-NWbyt10x7I0CHfEko-csc_gB7JWr68?usp=sharing
